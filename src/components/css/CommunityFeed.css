@@ -1,0 +1,10 @@
+.feed-container {
+    max-width: 600px; /* Giới hạn độ rộng như Facebook */
+    margin: 20px auto; /* Căn giữa trang */
+    padding: 0 10px;
+}
+
+.post-feed {
+    display: flex;
+    flex-direction: column;
+}

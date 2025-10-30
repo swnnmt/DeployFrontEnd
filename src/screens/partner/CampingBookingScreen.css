@@ -1,0 +1,158 @@
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Heading */
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+  transition: all 0.2s ease;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  color: #fff;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Inter", sans-serif;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+thead {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: #fff;
+}
+
+thead th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+tbody tr {
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #e6f7ff;
+  transform: scale(1.01);
+}
+
+tbody td {
+  padding: 12px 15px;
+  font-size: 14px;
+  color: #1f2937;
+  vertical-align: middle;
+}
+
+/* Status badges */
+.status-pending {
+  display: inline-block;
+  padding: 5px 12px;
+  color: #856404;
+  background-color: #fff3cd;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.status-confirmed {
+  display: inline-block;
+  padding: 5px 12px;
+  color: #155724;
+  background-color: #d4edda;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.status-cancelled {
+  display: inline-block;
+  padding: 5px 12px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+
+  tbody td {
+    padding: 8px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+    flex-basis: 50%;
+    text-align: left;
+  }
+}
+
+/* Banner wrapper */
+.banner-wrapper {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}

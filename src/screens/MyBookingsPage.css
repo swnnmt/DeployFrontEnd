@@ -1,0 +1,94 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  padding-top: 120px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c5282; /* màu xanh đậm */
+}
+
+.table-bookings {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.table-bookings th,
+.table-bookings td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.table-bookings th {
+  background-color: #f6ad55; /* màu cam sáng */
+  color: #1a202c; /* text tối */
+}
+
+.table-bookings tr:nth-child(even) {
+  background-color: #fef3e0; /* màu nền nhạt */
+}
+
+.table-bookings tr:hover {
+  background-color: #bee3f8; /* hover màu xanh nhạt */
+}
+
+.button-detail {
+  padding: 6px 12px;
+  background-color: #38b2ac; /* màu xanh ngọc */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button-detail:hover {
+  background-color: #319795;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(45, 55, 72, 0.7); /* nền tối hơn, không trắng */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fefcfb; /* màu nền sáng nhạt, không trắng */
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+.popup-content h3 {
+  color: #2c5282;
+}
+
+.button-close {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #e53e3e; /* màu đỏ */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button-close:hover {
+  background-color: #c53030;
+}

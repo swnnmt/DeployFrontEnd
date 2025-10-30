@@ -1,0 +1,28 @@
+.post-footer {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 8px;
+    border-top: 1px solid #eee;
+    margin-top: 8px;
+}
+
+.footer-button {
+    flex: 1;
+    padding: 8px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: #606770;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    border-radius: 6px;
+}
+
+.footer-button:hover {
+    background-color: #f0f2f5;
+}
+
+.footer-button.liked {
+    color: #007bff; /* Màu xanh khi đã like */
+}

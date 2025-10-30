@@ -1,0 +1,71 @@
+.create-camping-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.create-camping-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.create-camping-container form div {
+  margin-bottom: 15px;
+}
+
+.create-camping-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.create-camping-container input[type="text"],
+.create-camping-container input[type="number"],
+.create-camping-container textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.create-camping-container textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.create-camping-container button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.create-camping-container button:hover {
+  background-color: #45a049;
+}
+
+.create-camping-container h3 {
+  margin-top: 20px;
+  color: #333;
+}
+
+.create-camping-container input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.create-camping-container p {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}

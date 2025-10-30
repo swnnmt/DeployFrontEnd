@@ -1,0 +1,230 @@
+.invoice-admin {
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.filter-section {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Table */
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.invoice-table th,
+.invoice-table td {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  text-align: center;
+}
+
+.invoice-table th {
+  background: #f0f2f5;
+  font-weight: 600;
+}
+
+.invoice-table tr:hover {
+  background: #f9f9f9;
+}
+
+/* Status badge */
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.status-badge.completed {
+  background: #28a745;
+}
+
+.status-badge.confirmed {
+  background: #007bff;
+}
+
+.status-badge.cancelled {
+  background: #dc3545;
+}
+
+.status-badge.pending {
+  background: #ffc107;
+  color: #333;
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn.view {
+  background: #17a2b8;
+  color: white;
+}
+
+.btn.complete {
+  background: #28a745;
+  color: white;
+}
+
+.btn.cancel {
+  background: #dc3545;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+/* ID clickable */
+.invoice-id.clickable {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 500;
+}
+.invoice-id.clickable:hover {
+  text-decoration: underline;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Modal content */
+.modal-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.modal-subtitle {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.invoice-items {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+
+/* Filter section container */
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Input tìm kiếm có icon kính lúp */
+.filter-input {
+  padding: 8px 12px 8px 32px; /* padding-left để chừa chỗ icon */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 220px;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 001.48-5.34C15.01 5.01 12.51 2.5 9.5 2.5S4 5.01 4 8.5 6.51 14.5 9.5 14.5c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 13C7 13 5 11 5 8.5S7 4 9.5 4 14 6 14 8.5 12 13 9.5 13z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  background-size: 16px;
+}
+
+/* Dropdown filter trạng thái và số item */
+.filter-select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Hover và focus */
+.filter-input:focus,
+.filter-select:focus {
+  outline: none;
+  border-color: #2575fc;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+/* Chọn số item hiển thị nằm ngoài cùng bên phải */
+.filter-section .filter-select:last-child {
+  margin-left: auto;
+}
+
+/* Responsive: khi màn hình nhỏ, filter xếp dọc */
+@media (max-width: 600px) {
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-section .filter-select:last-child {
+    margin-left: 0;
+  }
+}

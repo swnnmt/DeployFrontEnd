@@ -1,0 +1,51 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cột ngang */
+  gap: 20px; /* khoảng cách giữa các card */
+  margin-top: 20px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.stat-card h2 {
+  font-size: 28px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.stat-icon {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+
+.stat-icon.green {
+  background: #22c55e;
+}
+.stat-icon.orange {
+  background: #f97316;
+}
+.stat-icon.blue {
+  background: #3b82f6;
+}
+.stat-icon.purple {
+  background: #8b5cf6;
+}
