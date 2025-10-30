@@ -29,7 +29,7 @@ const ManagerCamping = (props) => {
       setLoading(true);
       setError(null);
       try {
-        const res = await axios.get("http://103.200.22.89:8080/api/v1/camping");
+        const res = await axios.get("https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/camping");
         // Nếu API trả { data: [...] } thì điều chỉnh: res.data.data
         setAllCampings(Array.isArray(res.data) ? res.data : res.data || []);
       } catch (err) {

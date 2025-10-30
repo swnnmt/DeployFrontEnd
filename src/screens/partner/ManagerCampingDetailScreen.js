@@ -22,7 +22,7 @@ const [loadingReviews, setLoadingReviews] = useState(true);
  useEffect(() => {
   const fetchCamping = async () => {
     try {
-      const res = await axios.get("http://103.200.22.89:8080/api/v1/camping", {
+      const res = await axios.get("https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/camping", {
         params: { ownerId: userId },
       });
       const found = res.data.find((c) => String(c.id) === id);
@@ -37,7 +37,7 @@ const [loadingReviews, setLoadingReviews] = useState(true);
   const fetchReviews = async () => {
     try {
       const res = await axios.get(
-        `http://103.200.22.89:8080/api/v1/reviews/camping/${id}`
+        `https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/reviews/camping/${id}`
       );
       setReviews(res.data || []);
     } catch (err) {
@@ -56,7 +56,7 @@ const [loadingReviews, setLoadingReviews] = useState(true);
     if (!window.confirm("Bạn có chắc muốn xóa camping này?")) return;
 
     try {
-      await axios.delete(`http://103.200.22.89:8080/api/v1/camping/delete/${id}`);
+      await axios.delete(`https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/camping/delete/${id}`);
       alert("Xóa camping thành công!");
       navigate("/seller/managercamping"); // chuyển về trang danh sách
     } catch (error) {

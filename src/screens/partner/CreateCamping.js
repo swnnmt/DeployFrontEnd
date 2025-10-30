@@ -17,7 +17,7 @@ const CreateCamping = () => {
 useEffect(() => {
   const fetchCampingSites = async () => {
     try {
-      const res = await axios.get("http://103.200.22.89:8080/api/v1/camping-sites");
+      const res = await axios.get("https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/camping-sites");
       console.log("Camping sites:", res.data);
       setCampingSites(res.data || []);
     } catch (err) {
@@ -58,7 +58,7 @@ useEffect(() => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const res = await axios.get("http://103.200.22.89:8080/api/v1/service");
+        const res = await axios.get("https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/service");
         setServices(res.data);
       } catch (err) {
         console.error("Error fetching services:", err);
@@ -74,8 +74,8 @@ useEffect(() => {
   const fetchCamping = async () => {
     try {
       const [campingRes, serviceRes] = await Promise.all([
-        axios.get(`http://103.200.22.89:8080/api/v1/camping/${campingId}`),
-        axios.get("http://103.200.22.89:8080/api/v1/service")
+        axios.get(`https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/camping/${campingId}`),
+        axios.get("https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/service")
       ]);
 
       const serviceList = serviceRes.data;
@@ -170,8 +170,8 @@ const handleAddService = () => {
     e.preventDefault();
     try {
       const api = campingId
-        ? `http://103.200.22.89:8080/api/v1/camping/update/${campingId}`
-        : "http://103.200.22.89:8080/api/v1/camping";
+        ? `https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/camping/update/${campingId}`
+        : "https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/camping";
 
       const method = campingId ? "put" : "post";
 

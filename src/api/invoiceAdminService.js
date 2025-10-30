@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://103.200.22.89:8080/api/v1/admin/invoices";
+const API_URL = "https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/admin/invoices";
 
 // Lấy danh sách hóa đơn phân trang
 export const getAllInvoices = async (page = 0, size = 10) => {

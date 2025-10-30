@@ -15,7 +15,7 @@ const MyProductsScreen = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.get(`http://103.200.22.89:8080/api/v1/marketplace/user/${user.id}`);
+      const res = await axios.get(`https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/marketplace/user/${user.id}`);
       setProducts(res.data || []);
     } catch (err) {
       console.error(err);
@@ -28,7 +28,7 @@ const MyProductsScreen = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Bạn có chắc muốn xóa sản phẩm này?")) return;
     try {
-      await axios.delete(`http://103.200.22.89:8080/api/v1/marketplace/${id}`);
+      await axios.delete(`https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/marketplace/${id}`);
       fetchMyProducts();
     } catch (err) {
       console.error(err);

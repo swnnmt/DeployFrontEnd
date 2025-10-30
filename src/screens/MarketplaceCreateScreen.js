@@ -28,7 +28,7 @@ const MarketplaceCreateScreen = () => {
     setLoading(true);
     setError(null);
     try {
-      await axios.post("http://103.200.22.89:8080/api/v1/marketplace", form);
+      await axios.post("https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/marketplace", form);
       alert("Đăng sản phẩm thành công!");
       navigate("/marketplace/my-products"); // chuyển đến trang sản phẩm của tôi
     } catch (err) {

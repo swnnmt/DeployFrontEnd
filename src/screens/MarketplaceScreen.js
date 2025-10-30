@@ -14,7 +14,7 @@ const MarketplaceScreen = () => {
       setLoading(true);
       setError(null);
       try {
-        const res = await axios.get("http://103.200.22.89:8080/api/v1/marketplace");
+        const res = await axios.get("https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/marketplace");
         setProducts(res.data || []);
       } catch (err) {
         console.error(err);

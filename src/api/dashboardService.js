@@ -2,7 +2,7 @@
 import axios from "axios";
 
 // Base URL cho tất cả API dashboard
-const API_URL = "http://103.200.22.89:8080/api/v1/admin/dashboard";
+const API_URL = "https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/admin/dashboard";
 
 // 🟢 Lấy dữ liệu tổng quan (tổng booking, revenue, reviews, invoices...)
 export const getDashboardData = async () => {

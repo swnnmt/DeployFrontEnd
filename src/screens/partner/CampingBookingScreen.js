@@ -24,7 +24,7 @@ const CampingBookingScreen = () => {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.get(
-          `http://103.200.22.89:8080/api/v1/camping/booking/${campingInforId}?page=${page}&size=${size}`,
+          `https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/camping/booking/${campingInforId}?page=${page}&size=${size}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -37,7 +37,7 @@ const CampingBookingScreen = () => {
 
         // Lấy thông tin lều
         const tentPromises = bookingsData.map((b) =>
-          axios.get(`http://103.200.22.89:8080/api/tents/byTentId/${b.campingTentId}`)
+          axios.get(`https://semiopen-felicia-unsimular.ngrok-free.dev/api/tents/byTentId/${b.campingTentId}`)
         );
         const tentResponses = await Promise.all(tentPromises);
         const tentMapData = {};
@@ -70,7 +70,7 @@ const CampingBookingScreen = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://103.200.22.89:8080/api/v1/bookings/${bookingId}/completed`,
+        `https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/bookings/${bookingId}/completed`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );

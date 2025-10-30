@@ -30,7 +30,7 @@ const MyBookingsPage = () => {
 
         // ✅ Gọi API có phân trang
         const res = await axios.get(
-          `http://103.200.22.89:8080/api/v1/bookings/user/${userId}?page=${page}&size=${size}`,
+          `https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/bookings/user/${userId}?page=${page}&size=${size}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
 
@@ -73,7 +73,7 @@ const MyBookingsPage = () => {
         comment,
       };
 
-      await axios.post("http://103.200.22.89:8080/api/v1/reviews", payload, {
+      await axios.post("https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/reviews", payload, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://103.200.22.89:8080/api/v1/auth";
+const API_BASE_URL = "https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/auth";
 
 export const login = async (email, password) => {
   try {

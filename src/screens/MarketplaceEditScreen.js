@@ -23,7 +23,7 @@ const MarketplaceEditScreen = () => {
   const fetchProduct = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(`http://103.200.22.89:8080/api/v1/marketplace/${id}`);
+      const res = await axios.get(`https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/marketplace/${id}`);
       setForm(res.data);
     } catch (err) {
       console.error(err);
@@ -44,7 +44,7 @@ const MarketplaceEditScreen = () => {
   const handleSave = async () => {
     setSaving(true);
     try {
-      await axios.put(`http://103.200.22.89:8080/api/v1/marketplace/${id}`, form);
+      await axios.put(`https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/marketplace/${id}`, form);
       alert("Cập nhật sản phẩm thành công!");
       navigate("/marketplace/my-products");
     } catch (err) {
@@ -58,7 +58,7 @@ const MarketplaceEditScreen = () => {
   const handleDelete = async () => {
     if (!window.confirm("Bạn có chắc muốn xóa sản phẩm này?")) return;
     try {
-      await axios.delete(`http://103.200.22.89:8080/api/v1/marketplace/${id}`);
+      await axios.delete(`https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/marketplace/${id}`);
       alert("Xóa sản phẩm thành công!");
       navigate("/marketplace/my-products");
     } catch (err) {

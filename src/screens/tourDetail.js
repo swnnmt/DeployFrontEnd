@@ -24,7 +24,7 @@ const TourDetailPage = ({ campingId }) => {
     const fetchCampingDetail = async () => {
       try {
         const res = await fetch(
-          `http://103.200.22.89:8080/api/v1/camping/${campingId}`
+          `https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/camping/${campingId}`
         );
         const data = await res.json();
         setTourDetail(data);
@@ -49,7 +49,7 @@ const TourDetailPage = ({ campingId }) => {
     const fetchTentAvailability = async () => {
       try {
         const res = await fetch(
-          `http://103.200.22.89:8080/api/tents/byCampingId/${campingId}`
+          `https://semiopen-felicia-unsimular.ngrok-free.dev/api/tents/byCampingId/${campingId}`
         );
         const data = await res.json();
         setTentAvailability(data ?? []);
@@ -65,7 +65,7 @@ const TourDetailPage = ({ campingId }) => {
     const fetchGallery = async () => {
       try {
         const res = await fetch(
-          `http://103.200.22.89:8080/api/galleries/${campingId}`
+          `https://semiopen-felicia-unsimular.ngrok-free.dev/api/galleries/${campingId}`
         );
         const data = await res.json();
         setGalleryImages(data ?? []);
@@ -81,7 +81,7 @@ const TourDetailPage = ({ campingId }) => {
     const fetchReviews = async () => {
       try {
         const res = await fetch(
-          `http://103.200.22.89:8080/api/v1/reviews/camping/${campingId}`
+          `https://semiopen-felicia-unsimular.ngrok-free.dev/api/v1/reviews/camping/${campingId}`
         );
         const data = await res.json();
         setReviews(data ?? []);
